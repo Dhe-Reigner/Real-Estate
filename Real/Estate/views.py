@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
+
 
 def home(request):
     return render(request,'index.html')
@@ -12,6 +14,15 @@ def contact(request):
             email = request.POST['email']
             subject = request.POST['subject']
             message = request.POST['message']
+
+
+            # send an email
+            send_mail(
+              'message from ' + name, # subject
+                message, # message
+                email, # from email
+                ['ngashtabbs@gmail.com','martinkagema01@gmail.com'], # To Email
+            )
 
             return render(request, 'contact.html', {'name': name})
     else:    

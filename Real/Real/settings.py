@@ -126,3 +126,20 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# # Email Settings # #
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = '1025'
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_USE_TLS = False
+# # EMAIL_USE_SSL = False
+
+
+# myaccount.google.com/lesssecureapps
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'martinkagema01@gmail.com'
+EMAIL_HOST_PASSWORD = 'MA#$10rtin'
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
